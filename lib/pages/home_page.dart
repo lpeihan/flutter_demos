@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../demo/view_demo.dart';
 import '../demo/bottom_navigation_demo.dart';
 import '../demo/drawer_demo.dart';
 import '../demo/listview_demo.dart';
@@ -8,19 +9,22 @@ import '../demo/layout_demo.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
 
+  _handleSearchButton() {
+    print('search pressed');
+  }
+
   @override
   Widget build(BuildContext context) {
+
     return DefaultTabController(
-      length: 3,
+      length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: Text('网易云音乐'),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
-              onPressed: () {
-                print('search pressed');
-              },
+              onPressed: this._handleSearchButton
             ),
           ],
           bottom: TabBar(
@@ -32,6 +36,7 @@ class HomePage extends StatelessWidget {
               Tab(icon: Icon(Icons.local_florist),),
               Tab(icon: Icon(Icons.change_history),),
               Tab(icon: Icon(Icons.directions_bike),),
+              Tab(icon: Icon(Icons.view_quilt)),
             ],
           ),
         ),
@@ -39,7 +44,8 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             ListViewDemo(),
             BasicDemo(),
-            LayoutDemo()
+            LayoutDemo(),
+            ViewDemo()
           ],
         ),
         drawer: DrawerDemo(),
