@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../demo/navigation_demo.dart';
 import '../demo/view_demo.dart';
 import '../demo/bottom_navigation_demo.dart';
 import '../demo/drawer_demo.dart';
@@ -9,13 +10,13 @@ import '../demo/layout_demo.dart';
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
 
-  _handleSearchButton() {
-    print('search pressed');
-  }
-
   @override
   Widget build(BuildContext context) {
-
+  _handleSearchButton() {
+    Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => Page(title: 'search')
+    ));
+  }
     return DefaultTabController(
       length: 4,
       child: Scaffold(
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
-              onPressed: this._handleSearchButton
+              onPressed: _handleSearchButton
             ),
           ],
           bottom: TabBar(
