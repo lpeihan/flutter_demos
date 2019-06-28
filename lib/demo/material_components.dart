@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import './button_demo.dart';
-import './floating_action_button_demo.dart';
+import 'button_demo.dart';
+import 'floating_action_button_demo.dart';
+import 'popup_menu_button.dart';
+import 'checkbox_demo.dart';
+import 'radio_demo.dart';
 
 class MaterialComponents extends StatelessWidget {
   @override
@@ -12,6 +15,9 @@ class MaterialComponents extends StatelessWidget {
       ),
       body: ListView(
         children: <Widget>[
+          ListItem(title: 'Radio', page: RadioDemo()),
+          ListItem(title: 'Checkbox', page: CheckboxDemo()),
+          ListItem(title: 'PopupMenuButton', page: PopupMenuButtonDemo()),
           ListItem(title: 'Button', page: ButtonDemo()),
           ListItem(title: 'FloatingActionButton', page: FloatingActionButtonDemo()),
         ],

@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70
       ),
-      initialRoute: '/just',
+      initialRoute: '/material',
       routes: {
         '/': (context) => HomePage(),
         '/about': (context) => Page(title: 'about'),
