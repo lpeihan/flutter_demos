@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('网易云音乐'),
+          title: Text('网易云音乐~'),
           actions: <Widget>[
             IconButton(
               icon: Icon(Icons.search),
