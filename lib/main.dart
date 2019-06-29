@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'pages/netease/netease_page.dart';
 import 'demo/state_demo.dart';
 import 'demo/animation_demo.dart';
 import 'demo/material_components.dart';
@@ -25,9 +26,10 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70
       ),
-      initialRoute: '/state',
+      initialRoute: '/',
       routes: {
-        '/': (context) => HomePage(),
+        '/home': (context) => HomePage(),
+        '/': (context) => NeteasePage(),
         '/about': (context) => Page(title: 'about'),
         '/sliver': (context) => SliverDemo(),
         '/just': (context) => JustDemo(),
