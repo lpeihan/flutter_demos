@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'demo/state_demo.dart';
 import 'demo/animation_demo.dart';
 import 'demo/material_components.dart';
 import 'demo/form_demo.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         highlightColor: Color.fromRGBO(255, 255, 255, 0.5),
         splashColor: Colors.white70
       ),
-      initialRoute: '/animation',
+      initialRoute: '/state',
       routes: {
         '/': (context) => HomePage(),
         '/about': (context) => Page(title: 'about'),
@@ -32,7 +33,8 @@ class MyApp extends StatelessWidget {
         '/just': (context) => JustDemo(),
         '/form': (context) => FormDemo(),
         '/material': (context) => MaterialComponents(),
-        '/animation': (context) => AnimationDemo()
+        '/animation': (context) => AnimationDemo(),
+        '/state': (context) => StateManagementDemo()
       },
     );
   }
